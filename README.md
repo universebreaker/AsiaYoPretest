@@ -28,31 +28,29 @@ LIMIT 10;
 
 ## API test Q1
 
-controller:
+### controller:
 
-單一職責(S)
-OrderController只負責處理訂單相關request和response
-開放封閉(O)
-擴充Controller class以建立OrderController class，OrderController亦可被擴充以增加功能
-依賴反轉(D)
-OrderController依賴OrderCheckAndConvertRequest等其他object class而非特定instance
+單一職責(S) - OrderController只負責處理訂單相關request和response
 
-request:
+開放封閉(O) - 擴充Controller class以建立OrderController class，OrderController亦可被擴充以增加功能
 
-單一職責(S)
-request只定義及檢查請求
-開放封閉(O)
-擴充FormRequest以建立OrderCheckAndConvertRequest提供所需request定義及檢查
-依賴反轉(D)
-OrderCheckAndConvertRequest依賴Validator等object class而非特定instance
+依賴反轉(D) - OrderController依賴OrderCheckAndConvertRequest等其他object class而非特定instance
 
-rules:
-單一職責(S)
-rules只定義檢證規則
-開放封閉(O)
-擴充Rules以建立OrderNameRule，可進一步擴充以增加規則
-依賴反轉(D)
-OrderNameRule依賴ValidationRule等object class而非特定instance
+### request:
+
+單一職責(S) - request只定義及檢查請求
+
+開放封閉(O) - 擴充FormRequest以建立OrderCheckAndConvertRequest提供所需request定義及檢查
+
+依賴反轉(D) - OrderCheckAndConvertRequest依賴Validator等object class而非特定instance
+
+### rules:
+
+單一職責(S) - rules只定義檢證規則
+
+開放封閉(O) - 擴充Rules以建立OrderNameRule，可進一步擴充以增加規則
+
+依賴反轉(D) - OrderNameRule依賴ValidationRule等object class而非特定instance
 
 
 ## Command
