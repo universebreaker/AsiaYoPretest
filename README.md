@@ -57,7 +57,7 @@ OrderNameRule依賴ValidationRule等object class而非特定instance
 
 ## Command
 
-```bash
+```
 # build and run container
 docker build -t laravel-app .
 docker run -d -p 8000:8000 --name laravel-app laravel-app
